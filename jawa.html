@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jejak Nusantara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ProjectRoot/assets/css/nusantara.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/ProjectRoot/assets/js/script.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="announcement-bar">
+            Website Edukatif Pelestari Kebudayaan Indonesia!
+        </div>
+
+        <div class="site-header-main">
+            <div class="site-header-logo">
+                <h1>Jejak Nusantara</h1>
+            </div>
+
+            <nav class="site-header-nav">
+                <a href="#about">Tentang</a>
+                <a href="#explore">Explore</a>
+                <a href="#culture-map">Experience</a>
+                <a href="#contact">Hubungi</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="carousel">
+            <div class="gambar active" style="background-image: url('/ProjectRoot/assets/images/bali2.png');">
+                <div class="overlay"></div>
+                <div class="text-overlay">
+                    <h1>Bali</h1>
+                    <p>Surga tropis dengan pantai yang indah.</p>
+                </div>
+            </div>
+            <div class="gambar" style="background-image: url('/ProjectRoot/assets/images/bali5.png');">
+                <div class="overlay"></div>
+                <div class="text-overlay">
+                    <h1>Pulau Dewata</h1>
+                    <p>Budaya yang kaya dan pemandangan yang menakjubkan.</p>
+                </div>
+            </div>
+            <div class="gambar" style="background-image: url('/ProjectRoot/assets/images/bali7.png');">
+                <div class="overlay"></div>
+                <div class="text-overlay">
+                    <h1>Petualangan dan Bersantai</h1>
+                    <p>Tempat yang sempurna untuk bersantai dan berpetualang.</p>
+                </div>
+            </div>
+            <div class="description">
+                <p>Bali adalah pulau di Indonesia yang terkenal dengan keindahan alamnya, budaya yang kaya, dan
+                    keramahan penduduknya. Nikmati pengalaman tak terlupakan di pulau ini.</p>
+            </div>
+        </section>
+
+        <!-- Section Deskripsi -->
+        <section id="deskripsi">
+            <div class="container">
+                <div class="teks">
+                    <h1>Provinsi Bali</h1>
+                    <p>Bali adalah sebuah provinsi di Indonesia yang dikenal sebagai "Pulau Dewata" karena keindahan
+                        alamnya
+                        yang memukau dan kekayaan budayanya yang mendalam. Secara geografis, Bali terletak di antara
+                        Pulau
+                        Jawa di sebelah barat dan Pulau Lombok di sebelah timur. Dengan luas sekitar 5.780 km², provinsi
+                        ini
+                        memiliki bentang alam yang beragam, mulai dari pegunungan vulkanik, persawahan hijau yang subur,
+                        hingga pantai-pantai eksotis berpasir putih maupun hitam. Denpasar, ibu kota Bali, menjadi pusat
+                        administrasi, ekonomi, dan kebudayaan provinsi ini. Bali juga merupakan destinasi wisata
+                        internasional yang menarik jutaan wisatawan setiap tahun karena keindahan alam dan keramahan
+                        penduduknya yang memegang teguh nilai-nilai kearifan lokal.</p>
+                    <div class="desgambar">
+                        <img src="/ProjectRoot/assets/images/bali3.png" alt="Gambar 1">
+                    </div>
+                    <h1>Kebudayaan</h1>
+                    <p>Bali memiliki kebudayaan yang begitu kaya, terutama karena penduduknya mayoritas menganut agama
+                        Hindu
+                        Dharma, yang unik dan berbeda dengan Hindu di India. Upacara keagamaan seperti Ngaben (upacara
+                        kremasi), Melasti, dan Galungan-Kuningan adalah ritual suci yang tak hanya menjadi kewajiban
+                        religius tetapi juga daya tarik budaya. Seni tradisional Bali berkembang pesat dalam berbagai
+                        bentuk
+                        seperti tari, musik, seni rupa, dan kerajinan tangan. Tari-tarian seperti Tari Kecak, Barong,
+                        dan
+                        Legong menggambarkan kisah epik Ramayana atau kehidupan keseharian masyarakat Bali. Selain itu,
+                        gamelan Bali dengan ritme yang dinamis mencerminkan energi spiritual dan kreativitas
+                        masyarakatnya.
+                    </p>
+                    <div class="desgambar">
+                        <img src="/ProjectRoot/assets/images/bali4.png" alt="Gambar 2">
+                    </div>
+                    <h1>Bahasa</h1>
+                    <p>Bahasa Bali adalah bahasa sehari-hari penduduk lokal, meskipun Bahasa Indonesia digunakan dalam
+                        pendidikan dan administrasi resmi. Bahasa Bali sendiri memiliki hierarki tingkat tutur, yang
+                        menyesuaikan dengan status sosial atau hubungan antara pembicara dan lawan bicara. Hierarki ini
+                        dibagi menjadi Bali Alus (bahasa halus), Bali Madya (tingkat menengah), dan Bali Kasar (bahasa
+                        umum). Penggunaan bahasa ini menggambarkan pentingnya tata krama dan penghormatan dalam budaya
+                        Bali.
+                        Selain itu, aksara Bali juga masih diajarkan di sekolah-sekolah sebagai warisan budaya yang
+                        harus
+                        dilestarikan.
+                    </p>
+                    <div class="desgambar">
+                        <img src="/ProjectRoot/assets/images/bali1.png" alt="Gambar 3">
+                    </div>
+                    <h1>Keunikan</h1>
+                    <p>Keunikan Bali terletak pada kemampuannya menjaga tradisi di tengah modernitas dan pariwisata
+                        global.
+                        Sistem Subak, yang merupakan pengelolaan irigasi tradisional Bali, diakui UNESCO sebagai warisan
+                        budaya dunia. Subak bukan sekadar sistem pertanian tetapi juga bagian dari filosofi Tri Hita
+                        Karana
+                        yang mengajarkan keseimbangan hubungan antara manusia, Tuhan, dan alam. Selain itu, arsitektur
+                        pura-pura di Bali yang megah dan sakral menjadi ciri khas pulau ini. Pura Besakih, misalnya,
+                        dikenal
+                        sebagai "pura terbesar" di Bali yang berdiri megah di lereng Gunung Agung.
+                    </p>
+                    <h1>Pariwisata dan Ekonomi</h1>
+                    <p>Industri pariwisata menjadi tulang punggung ekonomi Bali. Destinasi wisata populer seperti Kuta,
+                        Ubud, Nusa Penida, dan Tanah Lot menawarkan pesona alam yang berbeda-beda. Di Ubud, wisatawan
+                        dapat
+                        menikmati suasana pedesaan yang damai serta menyaksikan kesenian tradisional, sementara
+                        pantai-pantai di Kuta atau Seminyak menjadi surga bagi pecinta selancar dan matahari terbenam.
+                        Selain pariwisata, kerajinan tangan seperti ukiran kayu, patung, dan kain tenun Bali turut
+                        menggerakkan roda perekonomian masyarakat lokal.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="containFooter">
+            <p>&copy; 2024 Jejak Nusantara | Ida Bagus Gede Dhananjaya</p>
+        </div>
+    </footer>
+
+    <script>
+        // Berpindah halaman
+        const buttons = document.querySelectorAll(".navigate");
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const url = this.getAttribute("data-url");
+                if (url) {
+                    window.location.href = url; // Arahkan ke URL yang diambil
+                }
+            });
+        });
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gambar');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 5000); // Ganti gambar setiap 5 detik
+
+    </script>
+
+</body>
+
+</html>

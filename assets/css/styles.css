@@ -1,0 +1,336 @@
+@import "/ProjectRoot/assets/css/wilayah.css";
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-image: linear-gradient(to bottom, #fff2d7, #f8c794, #d8ae7e);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 12.5rem;
+}
+
+@media (min-width: 626px) {
+  html {
+    scroll-padding-block-start: 10rem;
+  }
+}
+
+.announcement-bar {
+  padding: 0.75rem 10vw;
+  width: 100%;
+  text-align: center;
+  color: #d8ae7e;
+  border: none;
+  background-image: linear-gradient(
+    -60deg,
+    #ffffff 0%,
+    #ffffff 40%,
+    #d8ae7e 40%,
+    #d8ae7e 60%,
+    #ffffff 60%,
+    #ffffff 100%
+  );
+  background-size: 400% 100%;
+  background-position-x: 100%;
+
+  /* Add the animation */
+  animation: shimmer 5s infinite linear; /* Run shimmer every 4 seconds */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position-x: 150%;
+  }
+  100% {
+    background-position-x: -50%;
+  }
+}
+
+.site-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1.25rem 10vw;
+  background-color: #d8ae7e;
+}
+
+.site-header-logo h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2.5vw, 3rem);
+}
+
+nav a {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #fcfcfc;
+  text-decoration: none;
+  transition: color 1s ease, transform 1s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #a56113;
+}
+
+main {
+  padding: 0;
+}
+
+@media (min-width: 626px) {
+  main {
+    padding-top: 10rem;
+  }
+}
+
+header {
+  width: 100%;
+  background-color: rgb(22, 22, 22);
+  position: fixed;
+  z-index: 2000;
+  font-family: fantasy;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 0;
+}
+
+.containerCar {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: #f5f5f5;
+  box-shadow: 0 20px 40px #dbdbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerCar .slide .item {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background: #ababab;
+  color: #fff;
+}
+
+main section {
+  padding: 2rem 1rem;
+  display: grid;
+  background: #ffffff;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main section:nth-child(even) {
+  background: #f4f4f4;
+}
+
+main section h2 {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #14e5d4;
+}
+main section p,
+ul {
+  text-align: left;
+  margin-left: 10px;
+}
+
+main section ul {
+  list-style: disc;
+  padding-left: 10px;
+  text-align: left;
+}
+
+#map-container {
+  width: 100%;
+  height: 30vh;
+  min-height: 300px;
+  background: #ddd;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  #map-container {
+    margin-top: 1rem;
+    border-radius: 5px;
+  }
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #45a049;
+}
+
+footer {
+  background: #fff2d7;
+  font-weight: bold;
+  color: #d8ae7e;
+  text-align: center;
+  width: 100%;
+  height: 60px; /* Tentukan tinggi footer */
+  line-height: 60px; /* Sama dengan tinggi */
+}

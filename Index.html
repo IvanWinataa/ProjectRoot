@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jejak Nusantara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ProjectRoot/assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/ProjectRoot/assets/js/script.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="announcement-bar">
+            Website Edukatif Pelestari Kebudayaan Indonesia!
+        </div>
+
+        <div class="site-header-main">
+            <div class="site-header-logo">
+                <h1>Jejak Nusantara</h1>
+            </div>
+
+            <nav class="site-header-nav">
+                <a href="#about">Tentang</a>
+                <a href="#explore">Explore</a>
+                <a href="#culture-map">Experience</a>
+                <a href="#contact">Hubungi</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section id="explore">
+            <div class="containerCar">
+                <div class="slide">
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/bali1.png);">
+                        <div class="content">
+                            <div class="name">Bali</div>
+                            <div class="des">Pulau seribu pura dengan keanekaragaman budaya yang melegenda!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/jawa2.png);">
+                        <div class="content">
+                            <div class="name">Jawa</div>
+                            <div class="des">Pusat peradaban Nusantara dengan jejak sejarah yang mendalam dan budaya
+                                yang kaya. Tempat berkembangnya tradisi dan modernitas dalam harmoni.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/sumatera1.png);">
+                        <div class="content">
+                            <div class="name">Sumatera</div>
+                            <div class="des">Tanah emas yang memancarkan pesona alam liar dengan keindahan tak
+                                tertandingi. Penuh dengan tradisi megah yang menyatu dalam keragaman.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/kalimantan1.png);">
+                        <div class="content">
+                            <div class="name">Kalimantan</div>
+                            <div class="des">Paru-paru dunia yang memukau dengan hutan tropis yang rimbun dan megah.
+                                Rumah bagi kekayaan flora, fauna, dan masyarakat adat yang bijaksana.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/sumatera4.png);">
+                        <div class="content">
+                            <div class="name">Maluku</div>
+                            <div class="des">Surga rempah-rempah yang menjadi saksi perjalanan sejarah dunia. Pesona
+                                baharinya menyimpan keindahan yang tiada duanya.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/sumatera3.png);">
+                        <div class="content">
+                            <div class="name">Sulawesi</div>
+                            <div class="des">Pulau berbentuk unik dengan kekayaan budaya yang memesona dan tradisi yang
+                                terjaga. Dihiasi pesona laut, pegunungan, dan keindahan bawah laut yang luar biasa.
+                            </div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(/ProjectRoot/assets/images/papua4.png);">
+                        <div class="content">
+                            <div class="name">Papua</div>
+                            <div class="des">Bumi cenderawasih dengan keajaiban alam yang menakjubkan dan budaya yang
+                                autentik. Tanah yang memeluk tradisi leluhur dengan kemegahan alamnya.
+                            </div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="wilayah">
+            <div class="parent">
+                <div class="Bali" style="background-image: url(/ProjectRoot/assets/images/bali3.png);">
+                    <div class="content">
+                        <div class="name">Bali dan Nusa Tenggara</div>
+                        <div class="title">Bali yang dijuluku sebagai Pulau Dewata memiliki keindahan natural dengan
+                            budaya yang teramat asri.</div>
+                        <button class="navigate" data-url="bali.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/jawa3.png);">
+                    <div class="content">
+                        <div class="name">Jawa</div>
+                        <div class="title">Jawa memiliki kekayaan budaya yang sangat beragam.</div>
+                        <button class="navigate" data-url="jawa.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/sumatera4.png);">
+                    <div class="content">
+                        <div class="name">Sumatera</div>
+                        <div class="title">Sumatera terkenal dengan keindahan alam dan budayanya.</div>
+                        <button class="navigate" data-url="sumatera.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/kalimantan2.png);">
+                    <div class="content">
+                        <div class="name">Kalimantan</div>
+                        <div classs="title">Kalimantan memiliki hutan hujan tropis yang luas.</div>
+                        <button class="navigate" data-url="kalimantan.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/jawa4.png);">
+                    <div class="content">
+                        <div class="name">Maluku</div>
+                        <div class="title">Maluku dikenal dengan keindahan laut dan budayanya.</div>
+                        <button class="navigate" data-url="maluku.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/sumatera2.png);">
+                    <div class="content">
+                        <div class="name">Sulawesi</div>
+                        <div ```html <div class="title">Sulawesi memiliki budaya yang kaya dan beragam.</div>
+                        <button class="navigate" data-url="sulawesi.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+                <div class="child" style="background-image: url(/ProjectRoot/assets/images/papua2.png);">
+                    <div class="content">
+                        <div class="name">Papua</div>
+                        <div class="title">Papua terkenal dengan keanekaragaman budaya dan alamnya.</div>
+                        <button class="navigate" data-url="papua.html">Ayo Kunjungi!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="peta">
+            <div id="tts">
+                <h2>Text-to-Speech</h2>
+                <textarea id="inputText" rows="4" cols="50"
+                    placeholder="Masukkan teks untuk diucapkan..."></textarea><br>
+                <button id="speakButton">Bicara!</button>
+
+                <script>
+                    document.getElementById('speakButton').addEventListener('click', function () {
+                        var text = document.getElementById('inputText').value;
+                        if (text) {
+                            var utterance = new SpeechSynthesisUtterance(text);
+                            window.speechSynthesis.speak(utterance);
+                        } else {
+                            alert('Teks tidak boleh kosong!');
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section id="culture-map">
+            <div class="container">
+                <h2>Peta Budaya Interaktif</h2>
+                <p>Eksplorasi budaya Indonesia dengan peta interaktif. Pilih daerah untuk melihat tradisi,
+                    bahasa,
+                    dan
+                    sejarahnya.</p>
+                <div id="map-container" style="height: 500px;"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Tentang Jejak Nusantara</h2>
+                <p>Jejak Nusantara adalah platform edukatif untuk mendokumentasikan dan melestarikan kearifan
+                    lokal
+                    Indonesia berupa budaya, tradisi, dan bahasa daerah. Kami menghadirkan konten interaktif
+                    untuk
+                    semua
+                    kalangan, dengan dukungan teknologi terkini.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontak Kami</h2>
+                <form action="submit_contact.php" method="POST">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="containFooter">
+            <p>&copy; 2024 Jejak Nusantara | Ida Bagus Gede Dhananjaya</p>
+        </div>
+    </footer>
+
+    <script>
+        // Berpindah halaman
+        const buttons = document.querySelectorAll(".navigate");
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const url = this.getAttribute("data-url");
+                if (url) {
+                    window.location.href = url; // Arahkan ke URL yang diambil
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

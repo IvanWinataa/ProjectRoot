@@ -1,0 +1,81 @@
+#wilayah {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 1rem; /* Jarak antar elemen */
+}
+
+.parent {
+  grid-column: span 3; /* Membuat elemen Bali mengambil 3 kolom */
+  width: 90%;
+  margin-inline: auto;
+}
+
+.parent button {
+  background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang dengan transparansi */
+  color: rgb(29, 29, 29); /* Warna teks tombol */
+  border: none; /* Menghilangkan border default */
+  border-radius: 5px; /* Sudut membulat */
+  padding: 10px 20px; /* Padding atas/bawah dan kiri/kanan */
+  font-size: 16px; /* Ukuran font */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk efek hover */
+  backdrop-filter: blur(5px); /* Efek blur di belakang tombol */
+}
+
+button:hover {
+  background-color: rgba(47, 47, 47, 0.5); /* Warna latar belakang saat hover dengan transparansi */
+  transform: scale(1.05); /* Memperbesar tombol sedikit saat hover */
+  color: aqua;
+}
+
+button:focus {
+  outline: none; /* Menghilangkan outline saat tombol difokuskan */
+}
+
+.Bali {
+  grid-column: span 3; /* Membuat elemen Bali mengambil 3 kolom */
+  position: relative; /* Untuk mengatur posisi konten di dalamnya */
+  height: 200px; /* Atur tinggi sesuai kebutuhan */
+  color: white;
+  border-radius: 10px;
+  text-align: left;
+  background-size: cover; /* Pastikan gambar menutupi area */
+  transition: transform 0.3s ease;
+}
+
+/* Efek hover */
+.Bali:hover,
+.child:hover {
+  transform: scale(1.05); /* Memperbesar elemen saat di-hover */
+  z-index: 1; /* Pastikan elemen yang di-hover berada di atas */
+  border-radius: 10px;
+  height: 30%;
+  border-top: none;
+}
+
+.child {
+  height: 200px; /* Atur tinggi untuk elemen child */
+  border-width: 10px;
+  border-radius: 10px;
+  color: white;
+  background-size: cover; /* Pastikan gambar menutupi area */
+  position: relative;
+  border-top: 3px solid rgb(251, 251, 251);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Tambahan untuk styling konten */
+wilayah content {
+  position: absolute; /* Agar konten bisa diposisikan di tengah */
+  bottom: 10px; /* Jarak dari bawah */
+  left: 10px; /* Jarak dari kiri */
+  color: white; /* Warna teks */
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  padding: 10px; /* Padding untuk konten */
+  border-radius: 10px; /* Sudut membulat */
+}
+
+.blur {
+  filter: blur(4px); /* Atur tingkat blur sesuai kebutuhan */
+  transition: filter 0.3s ease; /* Transisi untuk efek blur */
+}
